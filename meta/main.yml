@@ -12,12 +12,11 @@ galaxy_info:
    - name: Ubuntu
      versions:
      - xenial
-     - bionix
+     - bionic
 
   galaxy_tags:
   - base
   - hostname
   - timezone
-
 
 dependencies: []
