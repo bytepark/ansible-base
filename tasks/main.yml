@@ -1,0 +1,18 @@
+---
+- name: "[base] Set Hostname"
+  hostname:
+    name: "{{ server.hostname }}"
+  when: server.hostname is defined
+
+- name: "[base] Configure the timezone"
+  template: src=timezone.tpl dest=/etc/timezone
+  when: server.timezone is defined
+
+- name: "[base] More Configuration of timezone"
+  file: src=/usr/share/zoneinfo/{{server.timezone}} dest=/etc/localtime state=link force=yes backup=yes
+  when: server.timezone is defined
+
+- name: "[base] Set default system language pack"
+  shell: locale-gen {{server.locale}}
+  when: server.locale is defined
+

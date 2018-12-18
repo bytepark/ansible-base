@@ -1,0 +1,23 @@
+galaxy_info:
+  role_name: base
+  author: Dev Team
+  description: Ansible Role to config base server settings
+  company: bytepark GmbH
+
+  license: license (MIT)
+
+  min_ansible_version: 2.4
+
+  platforms:
+   - name: Ubuntu
+     versions:
+     - xenial
+     - bionix
+
+  galaxy_tags:
+  - base
+  - hostname
+  - timezone
+
+
+dependencies: []
