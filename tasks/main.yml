@@ -13,5 +13,7 @@
   when: server.timezone is defined
 
 - name: "[base] Set default system language pack"
-  shell: locale-gen {{ server.locale }}
+  locale_gen: 
+    name: "{{ server.locale }}"
+    state: present
   when: server.locale is defined
