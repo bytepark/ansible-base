@@ -9,7 +9,7 @@
   when: server.timezone is defined
 
 - name: "[base] More Configuration of timezone"
-  file: src=/usr/share/zoneinfo/{{ server.timezone }} dest=/etc/localtime state=link force=yes backup=yes
+  file: src=/usr/share/zoneinfo/{{ server.timezone }} dest=/etc/localtime state=link force=yes
   when: server.timezone is defined
 
 - name: "[base] Set default system language pack"
